@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BME_IndiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BME_IndiaTests.m */; };
+		0CA8366ACC0A30DC8FE331CB /* libPods-BME_India.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C65A2721089BB757F4D27B09 /* libPods-BME_India.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		152736446E1F558869B6C2CD /* libPods-BME_India.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F8A5C163BF8D57E1594EFD /* libPods-BME_India.a */; };
+		2310A413BDBEAF273EF480FA /* libPods-BME_India-BME_IndiaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A97BB04AFDD1B019F3212051 /* libPods-BME_India-BME_IndiaTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		CCF4205A96EEE6B79A9B6EA0 /* libPods-BME_India-BME_IndiaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 269A1F55ADF522A171A1A5F6 /* libPods-BME_India-BME_IndiaTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +36,14 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BME_India/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BME_India/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BME_India/main.m; sourceTree = "<group>"; };
-		269A1F55ADF522A171A1A5F6 /* libPods-BME_India-BME_IndiaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BME_India-BME_IndiaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F01E328C262B6183F9D908E /* Pods-BME_India.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India.debug.xcconfig"; path = "Target Support Files/Pods-BME_India/Pods-BME_India.debug.xcconfig"; sourceTree = "<group>"; };
+		1B894262CB9A67A22DD70D22 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India-BME_IndiaTests.debug.xcconfig"; path = "Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		600864990BE6C81482D0BC11 /* Pods-BME_India.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India.release.xcconfig"; path = "Target Support Files/Pods-BME_India/Pods-BME_India.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BME_India/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		88F8A5C163BF8D57E1594EFD /* libPods-BME_India.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BME_India.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9610A3A76F4F6FCF8C4C4649 /* Pods-BME_India-BME_IndiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India-BME_IndiaTests.release.xcconfig"; path = "Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests.release.xcconfig"; sourceTree = "<group>"; };
-		EC13FA60AD66EBE5BE40B5CC /* Pods-BME_India.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India.release.xcconfig"; path = "Target Support Files/Pods-BME_India/Pods-BME_India.release.xcconfig"; sourceTree = "<group>"; };
+		A97BB04AFDD1B019F3212051 /* libPods-BME_India-BME_IndiaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BME_India-BME_IndiaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C65A2721089BB757F4D27B09 /* libPods-BME_India.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BME_India.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7531CDE054EC7B88D0084F7 /* Pods-BME_India.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India.debug.xcconfig"; path = "Target Support Files/Pods-BME_India/Pods-BME_India.debug.xcconfig"; sourceTree = "<group>"; };
+		E815FC0816CCE21FFE8CC1AE /* Pods-BME_India-BME_IndiaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India-BME_IndiaTests.release.xcconfig"; path = "Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		FF37B8F2C61F8696A1CDB540 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BME_India-BME_IndiaTests.debug.xcconfig"; path = "Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCF4205A96EEE6B79A9B6EA0 /* libPods-BME_India-BME_IndiaTests.a in Frameworks */,
+				2310A413BDBEAF273EF480FA /* libPods-BME_India-BME_IndiaTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				152736446E1F558869B6C2CD /* libPods-BME_India.a in Frameworks */,
+				0CA8366ACC0A30DC8FE331CB /* libPods-BME_India.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				88F8A5C163BF8D57E1594EFD /* libPods-BME_India.a */,
-				269A1F55ADF522A171A1A5F6 /* libPods-BME_India-BME_IndiaTests.a */,
+				C65A2721089BB757F4D27B09 /* libPods-BME_India.a */,
+				A97BB04AFDD1B019F3212051 /* libPods-BME_India-BME_IndiaTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,10 +140,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4F01E328C262B6183F9D908E /* Pods-BME_India.debug.xcconfig */,
-				EC13FA60AD66EBE5BE40B5CC /* Pods-BME_India.release.xcconfig */,
-				FF37B8F2C61F8696A1CDB540 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */,
-				9610A3A76F4F6FCF8C4C4649 /* Pods-BME_India-BME_IndiaTests.release.xcconfig */,
+				C7531CDE054EC7B88D0084F7 /* Pods-BME_India.debug.xcconfig */,
+				600864990BE6C81482D0BC11 /* Pods-BME_India.release.xcconfig */,
+				1B894262CB9A67A22DD70D22 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */,
+				E815FC0816CCE21FFE8CC1AE /* Pods-BME_India-BME_IndiaTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -155,12 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BME_IndiaTests" */;
 			buildPhases = (
-				13411EE48E4572F3A05D3C7F /* [CP] Check Pods Manifest.lock */,
+				B3802C7CEA5A8E25288F1073 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				210C9D456F85D4CDA27C1A9B /* [CP] Embed Pods Frameworks */,
-				5E08839028BFB996427FCFD9 /* [CP] Copy Pods Resources */,
+				80360BC58B221BF94B26F7CE /* [CP] Embed Pods Frameworks */,
+				FEBC62E7B73270BD72DBAE2D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,14 +176,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "BME_India" */;
 			buildPhases = (
-				80A566723AA678613A103AE8 /* [CP] Check Pods Manifest.lock */,
+				B8A73236E24F771020F5DC81 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				1F18971E4BBE353CEFDF9973 /* [CP] Embed Pods Frameworks */,
-				250E5DC35C8E0284120EAB5B /* [CP] Copy Pods Resources */,
+				76302B2F9321FAB435016F32 /* [CP] Embed Pods Frameworks */,
+				5E82F04FAD88AF6D0E976E34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +266,58 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		13411EE48E4572F3A05D3C7F /* [CP] Check Pods Manifest.lock */ = {
+		5E82F04FAD88AF6D0E976E34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76302B2F9321FAB435016F32 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80360BC58B221BF94B26F7CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3802C7CEA5A8E25288F1073 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,75 +339,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F18971E4BBE353CEFDF9973 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		210C9D456F85D4CDA27C1A9B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		250E5DC35C8E0284120EAB5B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India/Pods-BME_India-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E08839028BFB996427FCFD9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		80A566723AA678613A103AE8 /* [CP] Check Pods Manifest.lock */ = {
+		B8A73236E24F771020F5DC81 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -397,6 +380,23 @@
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		FEBC62E7B73270BD72DBAE2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BME_India-BME_IndiaTests/Pods-BME_India-BME_IndiaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,10 +430,11 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF37B8F2C61F8696A1CDB540 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */;
+			baseConfigurationReference = 1B894262CB9A67A22DD70D22 /* Pods-BME_India-BME_IndiaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = M6X6N2GDS4;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -450,7 +451,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bme.bmebharat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BME_India.app/BME_India";
 			};
@@ -458,11 +459,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9610A3A76F4F6FCF8C4C4649 /* Pods-BME_India-BME_IndiaTests.release.xcconfig */;
+			baseConfigurationReference = E815FC0816CCE21FFE8CC1AE /* Pods-BME_India-BME_IndiaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = M6X6N2GDS4;
 				INFOPLIST_FILE = BME_IndiaTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,7 +477,7 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bme.bmebharat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BME_India.app/BME_India";
 			};
@@ -483,11 +485,14 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F01E328C262B6183F9D908E /* Pods-BME_India.debug.xcconfig */;
+			baseConfigurationReference = C7531CDE054EC7B88D0084F7 /* Pods-BME_India.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = M6X6N2GDS4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BME_India/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -500,8 +505,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bme.bmebharat;
 				PRODUCT_NAME = BME_India;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -510,11 +516,14 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EC13FA60AD66EBE5BE40B5CC /* Pods-BME_India.release.xcconfig */;
+			baseConfigurationReference = 600864990BE6C81482D0BC11 /* Pods-BME_India.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_TEAM = M6X6N2GDS4;
 				INFOPLIST_FILE = BME_India/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -526,8 +535,9 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bme.bmebharat;
 				PRODUCT_NAME = BME_India;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -602,7 +612,11 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl",
+					"-ld_classic",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 			};
@@ -672,7 +686,11 @@
 					"-DFOLLY_MOBILE=1",
 					"-DFOLLY_USE_LIBCPP=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-Wl",
+					"-ld_classic",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

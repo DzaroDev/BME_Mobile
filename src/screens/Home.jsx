@@ -1,236 +1,248 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
   View,
   SectionList,
-  SafeAreaView,
-  Image,
   FlatList,
   ScrollView,
   Alert,
-} from 'react-native';
-import { APIMethod, APIURL, BME_Logo } from '../Constants';
-import { SearchBar } from 'react-native-elements';
-import Axios from '../api/Axios';
-import Loader from '../component/Loader';
+  Image,
+} from "react-native";
+import { ABOUT_US, APIMethod, APIURL, APPSTRING, BME_Logo } from "../Constants";
+import { SearchBar } from "react-native-elements";
+import Axios from "../api/Axios";
+import Loader from "../component/Loader";
+import { TouchableOpacity } from "react-native-gesture-handler";
+import RootComponent from "../component/RootComponent";
+import PageTitle from "../navigation/PageTitle";
+import AppStyles from "../config/AppStyles";
+import ViewMoreButton from "../component/ViewMoreButton";
+import ImageWithFallback from "../component/ImageWithFallback";
+import { useNavigation } from "@react-navigation/native";
+import NavigationRoute from "../navigation/NavigationRoute";
 
-const ListItem = ({ item }) => {
+const ListItem = ({ item, type }) => {
+  const navigation = useNavigation();
   return (
-    <View style={styles.item}>
-      {(item.uri) &&
-        <Image
-          source={{
-            uri: item.uri,
-          }}
+    <TouchableOpacity
+      style={styles.item}
+      onPress={() => {
+        // switch (item.type) {
+        //   case "companyList":
+        //     navigation.navigate(NavigationRoute.COMPANY_DETAIL, { data: item });
+        //     break;
+        //   case "blogList":
+        //     navigation.navigate(NavigationRoute.BLOG_DETAIL, { data: item });
+        //     break;
+        //   case "jobPostList":
+        //     navigation.navigate(NavigationRoute.JOB_DETAIL, { data: item });
+        //     break;
+        // }
+      }}
+    >
+      {type !== "jobPostList" && (
+        <ImageWithFallback
+          uri={item.image}
           style={styles.itemPhoto}
-          resizeMode="cover"
-        />
-      }
-
+          resizeMode={"contain"}
+        ></ImageWithFallback>
+      )}
       <Text style={styles.itemText}>{item.name}</Text>
-    </View>
+    </TouchableOpacity>
   );
 };
 
-export default () => {
-
-  const [searchText, setSearchText] = useState('')
+export default ({ navigation }) => {
+  const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
-  const [contentList, setContentList] = useState('');
+  const [contentList, setContentList] = useState("");
 
   getPageContent = () => {
-    setLoading(true)
-    var contents = []
-    Axios.request(APIMethod.GET, APIURL.GTE_PAGE_CONTENT).then((res) => {
-      console.log(JSON.stringify(res.data.data))
-      if (res.status == 200) {
-        Object.keys(res.data.data).forEach(value => {
-          switch (value) {
-            case 'companyList':
-              contents.push({
-                title: 'Vendor Directory',
-                horizontal: true, data: res.data.data[value]
-              })
-              break
-            case 'blogList':
-              contents.push({
-                title: 'Latest News',
-                horizontal: true, data: res.data.data[value]
-              })
-              break
-            case 'jobPostList':
-              contents.push({
-                title: 'Jobs',
-                horizontal: true, data: res.data.data[value]
-              })
-              break
-            default:
-              break
-          }
-        })
-
-        setContentList(contents);
-      } else {
-        Alert.alert(APPSTRING.App_Name, res.message)
-      }
-      setLoading(false)
-    }).catch((error) => {
-      console.log(error)
-      setLoading(false)
-      Alert.alert(APPSTRING.App_Name, error.data.message)
-    })
-  }
+    setLoading(true);
+    Axios.request(APIMethod.GET, APIURL.GET_PAGE_CONTENT)
+      .then((res) => {
+        if (res.status == 200) {
+          const contents = Object.keys(res.data.data).map((value, index) => {
+            switch (value) {
+              case "companyList":
+                return {
+                  title: "Vendor Directory",
+                  horizontal: true,
+                  data: res.data.data[value],
+                  index: index,
+                  type: value,
+                };
+              case "blogList":
+                return {
+                  title: "Latest News",
+                  horizontal: true,
+                  data: res.data.data[value],
+                  index: index,
+                  type: value,
+                };
+              case "jobPostList":
+                return {
+                  title: "Jobs",
+                  horizontal: true,
+                  data: res.data.data[value],
+                  index: index,
+                  type: value,
+                };
+              default:
+                break;
+            }
+          });
+          setContentList(contents);
+        } else {
+          Alert.alert(APPSTRING.App_Name, res.message);
+        }
+        setLoading(false);
+      })
+      .catch((error) => {
+        setLoading(false);
+        Alert.alert(APPSTRING.App_Name, error.data.message);
+      });
+  };
 
   useEffect(() => {
     getPageContent();
-  }, [])
+  }, []);
 
   return (
     //
-    <SafeAreaView style={styles.container}>
+    <RootComponent
+      style={AppStyles.container}
+      title={PageTitle.HOME}
+      isScrollrequired={false}
+      back={false}
+    >
       <Loader loading={loading} />
       <ScrollView>
-      <SearchBar
-        placeholder="Search Here..."
-        lightTheme
-        onChangeText={(text) => {
-          setSearchText(text)
-        }}
-        value={searchText}
-      />
-      <Text style={[styles.sectionHeader, { paddingHorizontal: 16 }]}>About Company</Text>
-      <Text style={[styles.itemText, { paddingHorizontal: 16 }]}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Text>
+        <SearchBar
+          placeholder="Search Here..."
+          lightTheme
+          containerStyle={{ backgroundColor: "transparent" }}
+          inputContainerStyle={{ backgroundColor: "transparent" }}
+          onChangeText={(text) => {
+            setSearchText(text);
+          }}
+          value={searchText}
+        />
+        <View style={[AppStyles.containerPadding, { gap: 5 }]}>
+          <Text style={[styles.sectionHeader, AppStyles.headerText]}>
+            About Company
+          </Text>
+          <Text style={[styles.itemText]}>
+            Welcome to BME Bharat App, your ultimate companion in the world of
+            biomedical engineering. We are a passionate team of professionals,
+            dedicated to simplifying and enhancing the way you engage with
+            biomedical engineering concepts and technologies.
+          </Text>
+          <ViewMoreButton
+            onPress={() => {
+              navigation.navigate("MyInAppWebView", {
+                url: ABOUT_US,
+                title: PageTitle.ABOUT_US,
+              });
+            }}
+          ></ViewMoreButton>
+        </View>
 
-      <Image
-        source={BME_Logo}
-        style={styles.logo} />
-      <SectionList
-        contentContainerStyle={{ paddingHorizontal: 10 }}
-        stickySectionHeadersEnabled={false}
-        scrollEnabled={false}
-        sections={contentList}
-        renderSectionHeader={({ section }) => (
-          <>
-            <Text style={styles.sectionHeader}>{section.title}</Text>
-            {section.horizontal ? (
-              <FlatList
-                horizontal
-                data={section.data}
-                renderItem={({ item }) => <ListItem item={item} />}
-                showsHorizontalScrollIndicator={false}
-              />
-            ) : null}
-          </>
-        )}
-        renderItem={({ item, section }) => {
-          if (section.horizontal) {
-            return null;
-          }
-          return <ListItem item={item} />;
-        }}
-      />
-       </ScrollView>
-    </SafeAreaView>
+        <Image source={BME_Logo} style={AppStyles.logo} />
+        <SectionList
+          contentContainerStyle={{ paddingHorizontal: 10 }}
+          stickySectionHeadersEnabled={true}
+          scrollEnabled={false}
+          sections={contentList}
+          renderSectionHeader={({ section }) => (
+            <>
+              <View style={[styles.sectionHeader]}>
+                <Text style={AppStyles.headerText}>{section.title}</Text>
+                <View style={{ flex: 1 }}>
+                  <TouchableOpacity
+                    onPress={() => {
+                      switch (section.index) {
+                        case 0:
+                          navigation.navigate("CompanyStack");
+                          break;
+                        case 1:
+                          navigation.navigate("LatestArticle");
+                          break;
+                        case 2:
+                          navigation.navigate("JobStack");
+                          break;
+                      }
+                    }}
+                  >
+                    {section.data.length > 1 ? (
+                      <Text
+                        style={[styles.viewAllButton, { textAlign: "right" }]}
+                      >
+                        View All
+                      </Text>
+                    ) : null}
+                  </TouchableOpacity>
+                </View>
+              </View>
+              {section.horizontal && (
+                <FlatList
+                  horizontal
+                  data={section.data}
+                  renderItem={({ item }) => (
+                    <ListItem item={item} type={section.type} />
+                  )}
+                  showsHorizontalScrollIndicator={false}
+                  ListHeaderComponent={() =>
+                    !section.data.length ? (
+                      <Text style={AppStyles.emptyMessageStyle}>
+                        {APPSTRING.No_Record}
+                      </Text>
+                    ) : null
+                  }
+                />
+              )}
+            </>
+          )}
+          renderItem={({ item, section }) => {
+            if (section.horizontal) {
+              return null;
+            }
+            return <ListItem item={item} />;
+          }}
+        />
+      </ScrollView>
+    </RootComponent>
   );
 };
 
-// const SECTIONS = [
-//   {
-//     title: 'Vendor Directory',
-//     horizontal: true,
-//     data: [
-//       {
-//         key: '1',
-//         text: 'Compnay 1',
-//         uri: 'https://picsum.photos/id/1/200',
-//       },
-//       {
-//         key: '2',
-//         text: 'Compnay 2',
-//         uri: 'https://picsum.photos/id/10/200',
-//       },
-
-//       {
-//         key: '3',
-//         text: 'Compnay 3',
-//         uri: 'https://picsum.photos/id/1002/200',
-//       },
-//       {
-//         key: '4',
-//         text: 'Compnay 4',
-//         uri: 'https://picsum.photos/id/1006/200',
-//       },
-//       {
-//         key: '5',
-//         text: 'Item text 5',
-//         uri: 'https://picsum.photos/id/1008/200',
-//       },
-//     ],
-//   },
-//   {
-//     title: 'Latest News',
-//     horizontal: true,
-//     data: [
-//       {
-//         key: '1',
-//         text: 'Article 1',
-//       },
-//       {
-//         key: '2',
-//         text: 'Article 2',
-//       },
-
-//       {
-//         key: '3',
-//         text: 'Article 3',
-//       },
-//       {
-//         key: '4',
-//         text: 'Article 4',
-//       },
-//       {
-//         key: '5',
-//         text: 'Article 5',
-//       },
-//     ],
-//   }
-// ];
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FFF',
-    justifyContent: 'start',
-    flexDirection: 'column',
-    padding: 16,
-    gap: 0
-  },
-  logo: {
-    height: 120,
-    width: 120,
-    resizeMode: 'center',
-    alignSelf: 'center'
-  },
   sectionHeader: {
-    fontWeight: '800',
-    fontSize: 18,
-    color: '#000',
     marginTop: 20,
     marginBottom: 5,
+    flex: 1,
+    flexDirection: "row",
+  },
+  viewAllButton: {
+    color: "#000",
+    fontSize: 16,
+    fontWeight: "500",
   },
   item: {
     borderWidth: 1,
-    borderColor: 'gray',
+    borderColor: "lightgray",
     padding: 8,
-    margin: 10
+    margin: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   itemPhoto: {
-    width: 200,
-    height: 200,
+    width: 100,
+    height: 100,
   },
   itemText: {
-    color: '#000',
-    textTransform: 'capitalize'
+    color: "#000",
+    textTransform: "capitalize",
+    fontSize: 15,
   },
 });
